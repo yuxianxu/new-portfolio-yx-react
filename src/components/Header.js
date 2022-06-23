@@ -1,9 +1,19 @@
-import { AppBar, Box, Drawer, IconButton, Toolbar } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItemButton,
+  Toolbar,
+} from '@mui/material';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 
-function Header() {
+function Header(props) {
+  const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -25,14 +35,15 @@ function Header() {
           <Box
             sx={{
               display: { xs: 'none', sm: 'flex' },
-              justifyContent: 'space-between',
-              minWidth: 300,
-              maxWidth: 500,
+              justifyContent: 'center',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              gap: 9,
             }}
           >
-            <Link to="/">Home</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/experience">Experience</Link>
+            <ListItemButton to="/">Home</ListItemButton>
+            <ListItemButton to="/projects">Projects</ListItemButton>
+            <ListItemButton to="/experience">Experience</ListItemButton>
           </Box>
         </Toolbar>
       </AppBar>
@@ -41,11 +52,36 @@ function Header() {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: 'flex', sm: 'none' },
+            flexDirection: 'column',
+            '.& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              // width: drawerWidth,
+            },
+          }}
         >
-          <Box onClick={handleDrawerToggle}>
-            <Link to="/">Home</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/experience">Experience</Link>
+          <Box
+            onClick={handleDrawerToggle}
+            sx={{
+              textAlign: 'center',
+              display: { xs: 'flex', sm: 'none' },
+              flexDirection: 'column',
+              gap: 2,
+              paddingTop: 5,
+              paddingBottom: 5,
+              height: '100%',
+            }}
+          >
+            <Divider />
+            <List>
+              <ListItemButton to="/">Home</ListItemButton>
+              <ListItemButton to="/projects">Projects</ListItemButton>
+              <ListItemButton to="/experience">Experience</ListItemButton>
+            </List>
           </Box>
         </Drawer>
       </Box>
