@@ -17,10 +17,10 @@ function Experience() {
           className="vertical-timeline-element--education"
           iconStyle={{ background: '#26c6da', color: '#fff' }}
           icon={<WorkIcon />}
-          date="2021-2022"
+          date="Mar, 2022 - present"
         >
           <h3 className="vertical-timeline-element-title">Front-end Developer</h3>
-          <p>High school diploma</p>
+          <p>Grouppers Inc</p>
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
@@ -29,8 +29,8 @@ function Experience() {
           icon={<WorkIcon />}
           date="2021-2022"
         >
-          <h3 className="vertical-timeline-element-title">My high School</h3>
-          <p>High school diploma</p>
+          <h3 className="vertical-timeline-element-title">Web Developer</h3>
+          <p>Freelance</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
@@ -38,8 +38,8 @@ function Experience() {
           icon={<SchoolIcon />}
           date="2021-2022"
         >
-          <h3 className="vertical-timeline-element-title">My high School</h3>
-          <p>High school diploma</p>
+          <h3 className="vertical-timeline-element-title">Web Development</h3>
+          <p>BrainStation</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
