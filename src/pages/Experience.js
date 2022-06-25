@@ -19,7 +19,7 @@ function Experience() {
           icon={<WorkIcon />}
           date="2021-2022"
         >
-          <h3 className="vertical-timeline-element-title">My high School</h3>
+          <h3 className="vertical-timeline-element-title">Front-end Developer</h3>
           <p>High school diploma</p>
         </VerticalTimelineElement>
 
