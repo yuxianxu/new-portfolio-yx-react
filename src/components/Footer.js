@@ -6,17 +6,28 @@ function Footer() {
   return (
     <Box>
       <Box
-        sx={{ display: 'flex', justifyContent: 'space-evenly', paddingTop: 4 }}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: 3,
+          paddingTop: 4,
+          paddingBottom: 4,
+          backgroundColor: 'black',
+          opacity: '0.7',
+        }}
       >
         <Link href="https://linkedin.com/in/yuxianxu">
-          <LinkedIn color="action" sx={{ fontSize: 30 }} />
+          <LinkedIn sx={{ fontSize: 30 }} />
         </Link>
         <Link href="https://github.com/yuxianxu">
-          <GitHub color="action" sx={{ fontSize: 30 }} />
+          <GitHub sx={{ fontSize: 30 }} />
         </Link>
         <Link href="https://facebook.com">
-          <FacebookRounded color="action" sx={{ fontSize: 30 }} />
+          <FacebookRounded sx={{ fontSize: 30 }} />
         </Link>
+      </Box>
+      <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: 3 }}>
+        &copy; 2022 &nbsp; <Link href="https://yuxianxu.com">Yuxian Xu</Link>
       </Box>
     </Box>
   );
