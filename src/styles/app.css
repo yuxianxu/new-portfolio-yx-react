@@ -84,3 +84,36 @@
       height: 300px;
     }
   }
+
+
+  .project {
+    width: 100%;
+    padding-top:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .project h1 {
+    margin-top: 50px;
+    color: #3e497a;
+    font-size: 35px;
+    padding-bottom: 24px;
+  }
+  .project img {
+    width: 700px;
+    border-radius: 10px;
+    padding-bottom: 24px;
+  }
+  
+  .project p {
+    font-size: 40px;
+    color: #3e497a;
+    padding-bottom: 2rem;
+  }
+  
+  .project svg {
+    font-size: 60px;
+    color: #3e497a;
+  }

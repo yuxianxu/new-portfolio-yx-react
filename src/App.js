@@ -6,6 +6,7 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import './styles/app.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Project from './pages/Project.js';
 
 
 const theme = createTheme({
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<Project />} />
         </Routes>
         <Footer />
       </Router>
