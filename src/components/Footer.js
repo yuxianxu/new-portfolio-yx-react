@@ -4,16 +4,14 @@ import React from 'react';
 
 function Footer() {
   return (
-    <Box>
+    <Box sx={{ backgroundColor: 'black', opacity: '0.7' }}>
       <Box
         sx={{
           display: 'flex',
           justifyContent: 'center',
           gap: 3,
           paddingTop: 4,
-          paddingBottom: 4,
-          backgroundColor: 'black',
-          opacity: '0.7',
+          paddingBottom: 2,
         }}
       >
         <Link href="https://linkedin.com/in/yuxianxu">
@@ -26,7 +24,15 @@ function Footer() {
           <FacebookRounded sx={{ fontSize: 30 }} />
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: 3 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          paddingTop: 1,
+          color: 'white',
+          paddingBottom: 2,
+        }}
+      >
         &copy; 2022 &nbsp; <Link href="https://yuxianxu.com">Yuxian Xu</Link>
       </Box>
     </Box>
