@@ -47,8 +47,8 @@ function Experience() {
           icon={<SchoolIcon />}
           date="2021-2022"
         >
-          <h3 className="vertical-timeline-element-title">My high School</h3>
-          <p>High school diploma</p>
+          <h3 className="vertical-timeline-element-title">Master of Business Administration</h3>
+          <p>Capital University of Economics and </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
