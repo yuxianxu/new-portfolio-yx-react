@@ -6,7 +6,7 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import './styles/app.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
+
 
 const theme = createTheme({
   palette: {

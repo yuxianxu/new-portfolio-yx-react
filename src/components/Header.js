@@ -9,11 +9,11 @@ import {
   Toolbar,
 } from '@mui/material';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
+import { History, NextWeek } from '@mui/icons-material';
 
-function Header(props) {
-  const { window } = props;
+function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -73,14 +73,26 @@ function Header(props) {
               gap: 2,
               paddingTop: 5,
               paddingBottom: 5,
+              color: 'white',
               height: '100%',
+              backgroundColor: 'black',
+              opacity: 0.7,
             }}
           >
             <Divider />
-            <List>
-              <ListItemButton to="/">Home</ListItemButton>
-              <ListItemButton to="/projects">Projects</ListItemButton>
-              <ListItemButton to="/experience">Experience</ListItemButton>
+            <List sx={{ paddingRight: 2, display: 'flex', flexDirection: 'column', gap: 4}}>
+              <ListItemButton to="/">
+                <HomeIcon sx={{ paddingRight: 2 }} />
+                Home
+              </ListItemButton>
+              <ListItemButton to="/projects">
+                <NextWeek sx={{ paddingRight: 2 }} />
+                Projects
+              </ListItemButton>
+              <ListItemButton to="/experience">
+                <History sx={{ paddingRight: 2 }} />
+                Experience
+              </ListItemButton>
             </List>
           </Box>
         </Drawer>
