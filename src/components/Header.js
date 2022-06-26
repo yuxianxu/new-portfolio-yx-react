@@ -1,12 +1,10 @@
 import {
-  AppBar,
   Box,
   Divider,
   Drawer,
   IconButton,
   List,
   ListItemButton,
-  Toolbar,
 } from '@mui/material';
 import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -21,32 +19,45 @@ function Header() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            edge="start"
-            sx={{ mr: 2, display: { sm: 'none' } }}
-            onClick={handleDrawerToggle}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            sx={{
-              display: { xs: 'none', sm: 'flex' },
-              justifyContent: 'center',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              gap: 9,
-            }}
-          >
-            <ListItemButton to="/">Home</ListItemButton>
-            <ListItemButton to="/projects">Projects</ListItemButton>
-            <ListItemButton to="/experience">Experience</ListItemButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
+    <Box
+      sx={{
+        backgroundColor: '#26c6da',
+        display: 'flex',
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: { xs: 'flex-start', sm: 'center' },
+          width: '100%',
+          paddingTop: 1,
+          paddingBottom: 1,
+        }}
+      >
+        <IconButton
+          color="inherit"
+          edge="start"
+          sx={{ ml: 1, display: { sm: 'none' } }}
+          onClick={handleDrawerToggle}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Box
+          sx={{
+            display: { xs: 'none', sm: 'flex' },
+            justifyContent: 'center',
+            paddingTop: 1.2,
+            paddingBottom: 1.2,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            gap: 9,
+          }}
+        >
+          <ListItemButton to="/">Home</ListItemButton>
+          <ListItemButton to="/projects">Projects</ListItemButton>
+          <ListItemButton to="/experience">Experience</ListItemButton>
+        </Box>
+      </Box>
       <Box component="nav">
         <Drawer
           variant="temporary"
@@ -80,7 +91,14 @@ function Header() {
             }}
           >
             <Divider />
-            <List sx={{ paddingRight: 2, display: 'flex', flexDirection: 'column', gap: 4}}>
+            <List
+              sx={{
+                paddingRight: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 4,
+              }}
+            >
               <ListItemButton to="/">
                 <HomeIcon sx={{ paddingRight: 2 }} />
                 Home
