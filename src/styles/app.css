@@ -4,13 +4,37 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.header {
+    position: fixed;
+    background-color: #26c6da;
+    width: 100%;
+    font-size: 1.1rem;
+    z-index: 1;
+}
+
+.navTitle {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 2rem;
+}
+
+.scrollEffect {
+    background-color: black;
+    transition: all 0.8s linear;
+    opacity: 0.8;
+}
+
+.scrollEffect a {
+    color: #26c6da;
+}
+
 .projects, .experience {
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
-    padding-top: 50px;
+    padding-top: 5rem;
     flex-direction: column;
 }
   
@@ -88,6 +112,10 @@
       width: 300px;
       height: 300px;
     }
+
+    .scrollEffect {
+        display: none;
+    }
   }
 
 
@@ -129,9 +157,11 @@
     font-family: "Arial", sans-serif;
     color: #3e497a;
   }
-  
+
+   
   .about {
     width: 100%;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
