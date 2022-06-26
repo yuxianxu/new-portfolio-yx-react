@@ -11,7 +11,21 @@ import 'react-vertical-timeline-component/style.min.css';
 
 function Experience() {
   return (
-    <Box sx={{ paddingTop: 15, paddingBottom: {xs: 5}, paddingLeft: {xs:4, }, paddingRight: {xs:3} }}>
+    <Box
+      sx={{
+        // paddingTop: 10,
+        paddingBottom: { xs: 5 },
+        paddingLeft: { xs: 4 },
+        paddingRight: { xs: 3 },
+        backgroundColor: '#f5f5f5',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+      className="experience"
+    >
+      <Box>
+        <h1>My Work and Education</h1>
+      </Box>
       <VerticalTimeline lineColor="#26c6da">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
@@ -19,7 +33,9 @@ function Experience() {
           icon={<WorkIcon />}
           date="Mar, 2022 - present"
         >
-          <h3 className="vertical-timeline-element-title">Front-end Developer</h3>
+          <h3 className="vertical-timeline-element-title">
+            Front-end Developer
+          </h3>
           <p>Grouppers Inc</p>
         </VerticalTimelineElement>
 
@@ -47,7 +63,9 @@ function Experience() {
           icon={<SchoolIcon />}
           date="2021-2022"
         >
-          <h3 className="vertical-timeline-element-title">Master of Business Administration</h3>
+          <h3 className="vertical-timeline-element-title">
+            Master of Business Administration
+          </h3>
           <p>Capital University of Economics and </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -60,7 +78,6 @@ function Experience() {
           <p>High school diploma</p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-
     </Box>
   );
 }

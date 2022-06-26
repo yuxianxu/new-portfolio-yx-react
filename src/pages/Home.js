@@ -1,9 +1,15 @@
-import React from 'react'
+
+import { Box } from '@mui/material';
+import React from 'react';
+import Hero from '../components/Hero.js';
 
 function Home() {
   return (
-    <div className='home'>Home</div>
-  )
+    <Box className="home">
+      <Hero />
+      
+    </Box>
+  );
 }
 
-export default Home
+export default Home;
