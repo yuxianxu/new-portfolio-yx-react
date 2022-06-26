@@ -5,7 +5,7 @@ import React from 'react';
 
 function Hero() {
   return (
-    <Box>
+    <Box className='hero'>
       <Box className="about" sx={{ width: '100%', backgroundColor: '#26c6da' }}>
         <h4>Hi, I'm Yuxian Xu</h4>
         <h2>A front-end software developer</h2>

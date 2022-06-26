@@ -18,20 +18,23 @@ function Header() {
     setMobileOpen(!mobileOpen);
   };
 
+  window.addEventListener('scroll', function (_e) {
+    let header = document.querySelector('.navTitle');
+    header.classList.toggle('scrollEffect', window.scrollY > 0);
+  });
+
   return (
     <Box
       sx={{
-        backgroundColor: '#26c6da',
         display: 'flex',
       }}
+      className="header"
     >
       <Box
         sx={{
           display: 'flex',
           justifyContent: { xs: 'flex-start', sm: 'center' },
           width: '100%',
-          paddingTop: 1,
-          paddingBottom: 1,
         }}
       >
         <IconButton
@@ -46,13 +49,14 @@ function Header() {
           sx={{
             display: { xs: 'none', sm: 'flex' },
             justifyContent: 'center',
-            paddingTop: 1.2,
-            paddingBottom: 1.2,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            gap: 9,
+            paddingTop: 2,
+            paddingBottom: 2,
+            paddingLeft: 'auto',
+            paddingRight: 'auto',
           }}
+          className="navTitle"
         >
+          <ListItemButton sx={{ width: '20%' }}></ListItemButton>
           <ListItemButton to="/">Home</ListItemButton>
           <ListItemButton to="/projects">Projects</ListItemButton>
           <ListItemButton to="/experience">Experience</ListItemButton>

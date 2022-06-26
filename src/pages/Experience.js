@@ -26,7 +26,7 @@ function Experience() {
       <Box>
         <h1>My Work and Education</h1>
       </Box>
-      <VerticalTimeline lineColor="#26c6da">
+      <VerticalTimeline lineColor="#26c6da" sx={{ zIndex: 0 }}>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           iconStyle={{ background: '#26c6da', color: '#fff' }}
