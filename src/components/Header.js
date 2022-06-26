@@ -43,7 +43,7 @@ function Header() {
           sx={{ ml: 1, display: { sm: 'none' } }}
           onClick={handleDrawerToggle}
         >
-          <MenuIcon />
+          <MenuIcon sx={{ fontSize: 40, color: '#3e497a' }} />
         </IconButton>
         <Box
           sx={{
@@ -53,6 +53,8 @@ function Header() {
             paddingBottom: 2,
             paddingLeft: 'auto',
             paddingRight: 'auto',
+            color: '#3e497a',
+            fontWeight: "500"
           }}
           className="navTitle"
         >
