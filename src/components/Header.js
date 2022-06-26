@@ -9,7 +9,7 @@ import {
 import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
-import { History, NextWeek } from '@mui/icons-material';
+import { History, NextWeek, StickyNote2 } from '@mui/icons-material';
 
 function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -56,6 +56,7 @@ function Header() {
           <ListItemButton to="/">Home</ListItemButton>
           <ListItemButton to="/projects">Projects</ListItemButton>
           <ListItemButton to="/experience">Experience</ListItemButton>
+          <ListItemButton to="/blog">Blog</ListItemButton>
         </Box>
       </Box>
       <Box component="nav">
@@ -110,6 +111,10 @@ function Header() {
               <ListItemButton to="/experience">
                 <History sx={{ paddingRight: 2 }} />
                 Experience
+              </ListItemButton>
+              <ListItemButton to="/blog">
+                <StickyNote2 sx={{ paddingRight: 2 }} />
+                Blog
               </ListItemButton>
             </List>
           </Box>
